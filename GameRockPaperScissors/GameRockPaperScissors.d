@@ -17,6 +17,11 @@ string MoveToString(Move move)
 	}
 }
 
+Move intToMove(int value) {
+    return cast(Move) value;
+}
+
+
 Move stringToMove(string input)
 {
 	input = input.strip().toLower();
@@ -29,7 +34,8 @@ Move stringToMove(string input)
 
 int main()
 {
-	auto botMove = uniform!(Move)(Move.Rock , Move.Scissors + 1);
+	auto botMoveInt = uniform(cast(int)Move.Rock , cast(int)Move.Scissors + 1);
+	auto botMove = intToMove(botMoveInt);
 	writeln("Please choose your move (rock, paper, scissors)");
 
 	string inputPlayer;
@@ -46,7 +52,7 @@ int main()
 		writeln("Invalid input. Please enter rock, paper, or scissors.");
 	}
 
-	 writeln("Bot chose: ", moveToString(botMove));
+	 writeln("Bot chose: ", MoveToString(botMove));
 
 	if(botMove  == playerMove)
 	{
