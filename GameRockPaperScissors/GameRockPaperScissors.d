@@ -2,112 +2,67 @@ module GameRockPaperScissors;
 
 import std.stdio;
 import std.random;
+import std.string;
 
-string Rock = "Rock";
-string Paper = "Paper";
-string Scissors = "Scissors";
-string ChoiseBot ;
-string StatusGame; 
-string StatusError = null;
-string StatusErrorInputPlayer = null;
+enum Move {Rock , Paper , Scissors}
+
+string MoveToString(Move move)
+{
+	switch(move)
+	{
+		case Move.Rock: return "Rock";
+		case Move.Paper: return "Paper";
+		case Move.Scissors: return "Scissors";
+		default: return "Unknown";
+	}
+}
+
+Move stringToMove(string input)
+{
+	input = input.strip().toLower();
+	if (input == "rock") return Move.Rock;
+	if (input == "paper") return Move.Paper;
+	if (input == "Scissors") return Move.Scissors;
+	return Move.Rock; //(Default) If botMessage == error
+
+}
 
 int main()
 {
-	ChoiseRoBot();
+	auto botMove = uniform!(Move)(Move.Rock , Move.Scissors + 1);
 	writeln("Please choose your move (rock, paper, scissors)");
-	string inputPlayer = readln();
-	CoreGame(inputPlayer);
-	writeln(StatusGame);
-	if(StatusError != null  )
+
+	string inputPlayer;
+	Move playerMove;
+
+	while(true)
 	{
-		writeln(StatusError);
+		inputPlayer = readln();
+		playerMove = stringToMove(inputPlayer);
+		if(playerMove != Move.Rock || inputPlayer.strip().toLower == "rock" ||inputPlayer.strip().toLower == "paper" ||inputPlayer.strip().toLower == "scissors"  )
+		{
+			break;
+		}
+		writeln("Invalid input. Please enter rock, paper, or scissors.");
 	}
-	if( StatusErrorInputPlayer != null)
+
+	 writeln("Bot chose: ", moveToString(botMove));
+
+	if(botMove  == playerMove)
 	{
-		writeln(StatusErrorInputPlayer);
+		writeln("Equal");
+	}else if((botMove == Move.Rock && playerMove == Move.Paper) || 
+			 (botMove == Move.Paper && playerMove == Move.Scissors ) ||
+			 (botMove == Move.Scissors && playerMove == Move.Rock))
+	{
+		writeln("You Win");
+	}else
+	{
+		writeln("you Lose");
 	}
     readln();
     return 0;
 }
-
-void ChoiseRoBot()
-{
-    int inputRandom = uniform!"[]"(1 , 3);
-    if(inputRandom == 1)
-	{
-		StatusError = null;
-        ChoiseBot = Rock;
-	}else if(inputRandom == 2)
-	{
-        ChoiseBot = Paper;
-		StatusError = null;
-
-	}else if(inputRandom == 3)
-	{
-		ChoiseBot = Scissors;
-		StatusError = null;
-	}else
-	{
-		StatusError = "Error Bot";
-	}
-    
-}
-
-void CoreGame(string MovePlayer )
-{
-	string Win = "Shoma Barande Shodid";
-	string Lose = "Shoma Bakhtid";
-	string Equal = "Shoma Barabar Shodid";
-	if(ChoiseBot == Rock)//سنگ
-	{
-		StatusErrorInputPlayer = null;
-		
-		if(MovePlayer == Rock)
-		{
-			StatusGame = Equal;
-		}else if (MovePlayer == Paper)
-		{
-			StatusGame = Win;	
-		}else if(MovePlayer == Scissors)
-		{
-			StatusGame = Lose;		
-		}
-	}else if(ChoiseBot ==  Paper)//کاغذ
-	{
-		StatusErrorInputPlayer = null;
-		if(MovePlayer == Rock)
-		{
-			StatusGame = Lose;			
-		}else if (MovePlayer == Paper)
-		{
-			StatusGame = Equal;		
-		}else if(MovePlayer == Scissors)
-		{
-			StatusGame = Win;			
-		}
-	}else if(ChoiseBot == Scissors)// قیچی
-	{
-		StatusErrorInputPlayer = null;
-		if(MovePlayer == Rock)
-		{
-			StatusGame = Win;
-		}else if (MovePlayer == Paper)
-		{
-			StatusGame = Lose;		
-		}else if(MovePlayer == Scissors)
-		{
-			StatusGame = Equal;			
-		}
-	}else
-	{
-		StatusErrorInputPlayer = "Vorodi Shoma Eshtebah Ast";
-		
-	}
-		 
-}
-
-
-
 
 
 
