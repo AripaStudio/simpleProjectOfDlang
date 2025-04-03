@@ -9,6 +9,10 @@ Project("{002A2DE9-8BB6-484D-9802-7E4AD4084715}") = "CountLetters", "CountLetter
 EndProject
 Project("{002A2DE9-8BB6-484D-9802-7E4AD4084715}") = "RandomGenerator", "RandomGenerator\RandomGenerator.visualdproj", "{B130C6AB-B547-477F-BD0B-7EC3D1D0F9D6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleGameConsoleDlang", "SimpleGameConsoleDlang", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{002A2DE9-8BB6-484D-9802-7E4AD4084715}") = "GameRockPaperScissors", "GameRockPaperScissors\GameRockPaperScissors.visualdproj", "{2EF84051-292D-4A44-AFBD-2A2FC9ADFFD6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,9 +45,20 @@ Global
 		{B130C6AB-B547-477F-BD0B-7EC3D1D0F9D6}.Release|x64.Build.0 = Release|x64
 		{B130C6AB-B547-477F-BD0B-7EC3D1D0F9D6}.Release|x86.ActiveCfg = Release|Win32
 		{B130C6AB-B547-477F-BD0B-7EC3D1D0F9D6}.Release|x86.Build.0 = Release|Win32
+		{2EF84051-292D-4A44-AFBD-2A2FC9ADFFD6}.Debug|x64.ActiveCfg = Debug|x64
+		{2EF84051-292D-4A44-AFBD-2A2FC9ADFFD6}.Debug|x64.Build.0 = Debug|x64
+		{2EF84051-292D-4A44-AFBD-2A2FC9ADFFD6}.Debug|x86.ActiveCfg = Debug|Win32
+		{2EF84051-292D-4A44-AFBD-2A2FC9ADFFD6}.Debug|x86.Build.0 = Debug|Win32
+		{2EF84051-292D-4A44-AFBD-2A2FC9ADFFD6}.Release|x64.ActiveCfg = Release|x64
+		{2EF84051-292D-4A44-AFBD-2A2FC9ADFFD6}.Release|x64.Build.0 = Release|x64
+		{2EF84051-292D-4A44-AFBD-2A2FC9ADFFD6}.Release|x86.ActiveCfg = Release|Win32
+		{2EF84051-292D-4A44-AFBD-2A2FC9ADFFD6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2EF84051-292D-4A44-AFBD-2A2FC9ADFFD6} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AAA61C91-7A0C-48DB-AE06-D9215AAF7AE4}

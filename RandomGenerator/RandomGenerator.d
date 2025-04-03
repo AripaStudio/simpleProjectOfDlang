@@ -20,7 +20,8 @@ int main()
 	{
         writeln(randomGen.nextInRange(1,10));
 	}
-
+    
+    
     readln();
     return 0;
 }
