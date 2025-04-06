@@ -21,17 +21,51 @@ void main()
 		if(inputUser == "fifty")
 		{
 			PlayGameone_to_fifty();
-			inputGame = true;
+			
+
+			writeln("Do you want to end the game? Or continue?
+					'Yes = end the game'
+					'No = continue'");
+			string inputGameEnd = readln().strip;
+			if(inputGameEnd == "yes")
+			{
+				inputGame = true;
+			}
+
+
 		}else if(inputUser == "hundred")
 		{
 			PlayGameone_to_hundred();
-			inputGame = true;
+			
+
+			writeln("Do you want to end the game? Or continue?
+					'Yes = end the game'
+					'No = continue'");
+			string inputGameEnd = readln().strip;
+			if(inputGameEnd == "yes")
+			{
+				inputGame = true;
+			}
+
+
 		}else if(inputUser == "any")
 		{
 			writeln("Enter the maximum number for the game: ");
 			int maxRandom = to!int(readln().strip());
 			PlayGameone_to_any(maxRandom);
-			inputGame = true;
+
+
+			writeln("Do you want to end the game? Or continue?
+					'Yes = end the game'
+					'No = continue'");
+			string inputGameEnd = readln().strip;
+			if(inputGameEnd == "yes")
+			{
+				inputGame = true;
+			}
+
+
+
 		}else
 		{
 			writeln("Invalid input. Please enter 'fifty' or 'hundred' or 'any'.");
