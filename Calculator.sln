@@ -15,6 +15,8 @@ Project("{002A2DE9-8BB6-484D-9802-7E4AD4084715}") = "GameRockPaperScissors", "Ga
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameRockPaperScissorsCs", "GameRockPaperScissorsCs\GameRockPaperScissorsCs.csproj", "{D3080E85-FB55-40B6-9A16-36D33BD837C8}"
 EndProject
+Project("{002A2DE9-8BB6-484D-9802-7E4AD4084715}") = "GuessTheNumber", "GuessTheNumber\GuessTheNumber.visualdproj", "{9AA38A4C-68D1-4B99-B611-060B20CEFB7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,18 @@ Global
 		{D3080E85-FB55-40B6-9A16-36D33BD837C8}.Release|x64.Build.0 = Release|Any CPU
 		{D3080E85-FB55-40B6-9A16-36D33BD837C8}.Release|x86.ActiveCfg = Release|Any CPU
 		{D3080E85-FB55-40B6-9A16-36D33BD837C8}.Release|x86.Build.0 = Release|Any CPU
+		{9AA38A4C-68D1-4B99-B611-060B20CEFB7A}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{9AA38A4C-68D1-4B99-B611-060B20CEFB7A}.Debug|Any CPU.Build.0 = Debug|x64
+		{9AA38A4C-68D1-4B99-B611-060B20CEFB7A}.Debug|x64.ActiveCfg = Debug|x64
+		{9AA38A4C-68D1-4B99-B611-060B20CEFB7A}.Debug|x64.Build.0 = Debug|x64
+		{9AA38A4C-68D1-4B99-B611-060B20CEFB7A}.Debug|x86.ActiveCfg = Debug|Win32
+		{9AA38A4C-68D1-4B99-B611-060B20CEFB7A}.Debug|x86.Build.0 = Debug|Win32
+		{9AA38A4C-68D1-4B99-B611-060B20CEFB7A}.Release|Any CPU.ActiveCfg = Release|x64
+		{9AA38A4C-68D1-4B99-B611-060B20CEFB7A}.Release|Any CPU.Build.0 = Release|x64
+		{9AA38A4C-68D1-4B99-B611-060B20CEFB7A}.Release|x64.ActiveCfg = Release|x64
+		{9AA38A4C-68D1-4B99-B611-060B20CEFB7A}.Release|x64.Build.0 = Release|x64
+		{9AA38A4C-68D1-4B99-B611-060B20CEFB7A}.Release|x86.ActiveCfg = Release|Win32
+		{9AA38A4C-68D1-4B99-B611-060B20CEFB7A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +106,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{2EF84051-292D-4A44-AFBD-2A2FC9ADFFD6} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{D3080E85-FB55-40B6-9A16-36D33BD837C8} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{9AA38A4C-68D1-4B99-B611-060B20CEFB7A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AAA61C91-7A0C-48DB-AE06-D9215AAF7AE4}
