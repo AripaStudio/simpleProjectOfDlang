@@ -5,6 +5,8 @@ import std.random;
 import std.string;
 import std.conv; 
 
+
+public bool inputGame;
 void main()
 {
     writeln("Whether the game is from 1 to 50 or 1 to 100
@@ -14,64 +16,43 @@ void main()
 			hundred
 			And for any number, write:
 			any");
-	bool inputGame = false;
+	//bool inputGame = false;
 	while(!inputGame)
 	{
 		string inputUser = readln().strip;
 		if(inputUser == "fifty")
 		{
-			PlayGameone_to_fifty();
-			
-
-			writeln("Do you want to end the game? Or continue?
-					'Yes = end the game'
-					'No = continue'");
-			string inputGameEnd = readln().strip;
-			if(inputGameEnd == "yes")
-			{
-				inputGame = true;
-			}
-
+			PlayGameone_to_fifty();		
+			EndGame();
 
 		}else if(inputUser == "hundred")
 		{
 			PlayGameone_to_hundred();
-			
-
-			writeln("Do you want to end the game? Or continue?
-					'Yes = end the game'
-					'No = continue'");
-			string inputGameEnd = readln().strip;
-			if(inputGameEnd == "yes")
-			{
-				inputGame = true;
-			}
-
-
+			EndGame();		
 		}else if(inputUser == "any")
 		{
 			writeln("Enter the maximum number for the game: ");
 			int maxRandom = to!int(readln().strip());
 			PlayGameone_to_any(maxRandom);
-
-
-			writeln("Do you want to end the game? Or continue?
-					'Yes = end the game'
-					'No = continue'");
-			string inputGameEnd = readln().strip;
-			if(inputGameEnd == "yes")
-			{
-				inputGame = true;
-			}
-
-
-
+			EndGame();			
 		}else
 		{
 			writeln("Invalid input. Please enter 'fifty' or 'hundred' or 'any'.");
 		}
 	}
 	
+}
+
+void EndGame()
+{
+	writeln("Do you want to end the game? Or continue?
+			'Yes = end the game'
+			'No = continue'");
+	string inputGameEnd = readln().strip;
+	if(inputGameEnd == "yes")
+	{
+		inputGame = true;
+	}
 }
 
 void PlayGameone_to_fifty()
