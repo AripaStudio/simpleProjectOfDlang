@@ -8,10 +8,12 @@ import std.conv;
 void main()
 {
     writeln("Whether the game is from 1 to 50 or 1 to 100
-			For one to fifty write:
+			For one to fifty, write:
 			fifty
-			And for one to one hundred write:
-			hundred");
+			And for one to one hundred, write:
+			hundred
+			And for any number, write:
+			any");
 	bool inputGame = false;
 	while(!inputGame)
 	{
@@ -24,9 +26,15 @@ void main()
 		{
 			PlayGameone_to_hundred();
 			inputGame = true;
+		}else if(inputUser == "any")
+		{
+			writeln("Enter the maximum number for the game: ");
+			int maxRandom = to!int(readln().strip());
+			PlayGameone_to_any(maxRandom);
+			inputGame = true;
 		}else
 		{
-			writeln("Invalid input. Please enter 'fifty' or 'hundred'.");
+			writeln("Invalid input. Please enter 'fifty' or 'hundred' or 'any'.");
 		}
 	}
 	
@@ -88,6 +96,36 @@ void PlayGameone_to_hundred()
 		}
 	}
 
+}
+
+void PlayGameone_to_any( int MaxRandom)
+{
+    int answerRandom = uniform( 1, MaxRandom);
+	int playerGuess;
+	bool guessedCorrectly = false;
+	string maxRandomInt = to!string(MaxRandom);
+	writeln("Guess the number between 1 and " ~ maxRandomInt ~ " : ");
+
+	while (!guessedCorrectly)
+	{
+		write("Enter your guess: ");
+		playerGuess = to!int(readln().strip());
+
+		if (playerGuess < answerRandom)
+		{
+			writeln("Too low! Try again.");
+		}
+		else if (playerGuess > answerRandom)
+		{
+			writeln("Too high! Try again.");
+		}
+		else
+		{
+			writeln("Congratulations! You guessed the correct number.");
+			readln();
+			guessedCorrectly = true;
+		}
+	}
 }
 
 
