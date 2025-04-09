@@ -18,13 +18,17 @@ public class JsonDataFile
 
     public string[] skills ;
     
+    
+
     JSONValue toJson() 
 	{
-        return [
-		"Name" : Name,
-        "number" : number,
-        "skills": skills.map!(s => JSONValue(s)).array
-		];
+        auto jsonSkills = skills.map!(s => JSONValue(s)).array;
+
+        return  JSONValue([
+			"Name" : JSONValue(Name),
+			"number" : JSONValue(number),
+			"skills": JSONValue(jsonSkills)
+		]);
 
 	}
 
@@ -41,18 +45,28 @@ public class JsonDataFile
 
 }
 
-int main()
-{  
-    string filePath = "JsonDataFile.json";
-    
-    auto data = new JsonDataFile();
+public string filePath = "JsonDataFile.json";
+public int ErrorJsonTest = 0;
+
+void JsonTest()
+{
+	auto data = new JsonDataFile();
     data.Name = "khashayar";
     data.number = "123";
     data.skills = ["Dlang" , "Csharp"];
 
     File(filePath , "w").write(data.toJson().toString);
 
-    auto JsonStringRead = readText(filePath);
+    string JsonStringRead ;
+    try 
+	{
+        JsonStringRead = readText(filePath);
+	}catch (Exception e)
+	{
+		writeln("Error reading file: ", e.msg);
+		ErrorJsonTest = 1;
+	}
+
     JSONValue json = parseJSON(JsonStringRead);
     auto loadedData = JsonDataFile.fromJson(json);
 
@@ -61,6 +75,17 @@ int main()
     writeln("Skills : " , loadedData.skills);
 
 
+}
+
+int main()
+{  
+    
+    
+    JsonTest();
+    if(ErrorJsonTest == 1)
+	{
+        return 1;
+	}
     void callaripa()
 	{
         auto aripa = new JsonAripa();
@@ -69,3 +94,5 @@ int main()
     readln();
     return 0;
 }
+
+
