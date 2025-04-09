@@ -19,6 +19,8 @@ Project("{002A2DE9-8BB6-484D-9802-7E4AD4084715}") = "GuessTheNumber", "GuessTheN
 EndProject
 Project("{002A2DE9-8BB6-484D-9802-7E4AD4084715}") = "TicTac_Toe", "TicTac_Toe\TicTac_Toe.visualdproj", "{443F0A37-6347-440D-AC4B-976F6DFCF485}"
 EndProject
+Project("{002A2DE9-8BB6-484D-9802-7E4AD4084715}") = "JsonDlang", "JsonDlang\JsonDlang.visualdproj", "{1D0BDEA4-C962-439C-A14B-B94A69AC24A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +115,18 @@ Global
 		{443F0A37-6347-440D-AC4B-976F6DFCF485}.Release|x64.Build.0 = Release|x64
 		{443F0A37-6347-440D-AC4B-976F6DFCF485}.Release|x86.ActiveCfg = Release|Win32
 		{443F0A37-6347-440D-AC4B-976F6DFCF485}.Release|x86.Build.0 = Release|Win32
+		{1D0BDEA4-C962-439C-A14B-B94A69AC24A1}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{1D0BDEA4-C962-439C-A14B-B94A69AC24A1}.Debug|Any CPU.Build.0 = Debug|x64
+		{1D0BDEA4-C962-439C-A14B-B94A69AC24A1}.Debug|x64.ActiveCfg = Debug|x64
+		{1D0BDEA4-C962-439C-A14B-B94A69AC24A1}.Debug|x64.Build.0 = Debug|x64
+		{1D0BDEA4-C962-439C-A14B-B94A69AC24A1}.Debug|x86.ActiveCfg = Debug|Win32
+		{1D0BDEA4-C962-439C-A14B-B94A69AC24A1}.Debug|x86.Build.0 = Debug|Win32
+		{1D0BDEA4-C962-439C-A14B-B94A69AC24A1}.Release|Any CPU.ActiveCfg = Release|x64
+		{1D0BDEA4-C962-439C-A14B-B94A69AC24A1}.Release|Any CPU.Build.0 = Release|x64
+		{1D0BDEA4-C962-439C-A14B-B94A69AC24A1}.Release|x64.ActiveCfg = Release|x64
+		{1D0BDEA4-C962-439C-A14B-B94A69AC24A1}.Release|x64.Build.0 = Release|x64
+		{1D0BDEA4-C962-439C-A14B-B94A69AC24A1}.Release|x86.ActiveCfg = Release|Win32
+		{1D0BDEA4-C962-439C-A14B-B94A69AC24A1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
