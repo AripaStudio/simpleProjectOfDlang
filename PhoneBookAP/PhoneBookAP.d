@@ -2,6 +2,7 @@ module PhoneBookAP;
 
 import std.stdio;
 import CLmanagerJson;
+import std.string;
 import std.file;
 import std.json;
 import std.conv;
@@ -25,7 +26,7 @@ int main()
 			string inputUsernumber = readln();
 			if(inputUserFirstName.empty && inputUserLastName.empty && inputUsernumber.empty)
 			{
-				writeln("Error , Inputs must not be empty.")
+				writeln("Error , Inputs must not be empty.");
 			}else
 			{
 				manager.AddData(inputUserFirstName , inputUserLastName , inputUsernumber);
@@ -33,13 +34,16 @@ int main()
 
 		}else if(inputUser == "show")
 		{
-
+			writeln("All Contacts:");
+			manager.ShowData();
 		}else if(inputUser == "delete")
 		{
-
+			writeln("To delete a user, you must enter the user name.");
+			string inputUserDelete = readln();
+			manager.DeleteData(inputUserDelete);
 		}else if(inputUser == "exit")
 		{
-
+			break;
 		}else if(inputUser == "help")
 		{
 			help();

@@ -70,7 +70,7 @@ public class ClmanagerJsonClass
 	private void saveData()
 	{
 		JSONValue json = JSONValue(contacts.map!(c => c.toJson()).array);
-		write(fileName , json.toPrettyString());
+		std.file.write(fileName , json.toPrettyString());
 	}
 
 
