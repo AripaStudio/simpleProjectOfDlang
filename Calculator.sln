@@ -23,6 +23,8 @@ Project("{002A2DE9-8BB6-484D-9802-7E4AD4084715}") = "JsonDlang", "JsonDlang\Json
 EndProject
 Project("{002A2DE9-8BB6-484D-9802-7E4AD4084715}") = "PhoneBookAP", "PhoneBookAP\PhoneBookAP.visualdproj", "{FA6BC769-575C-42A2-AB71-863BD643B01A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jsonTestPhoneBook", "jsonTestPhoneBook\jsonTestPhoneBook.csproj", "{62D294A2-3C97-4EFD-AA68-A81F336704AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,18 @@ Global
 		{FA6BC769-575C-42A2-AB71-863BD643B01A}.Release|x64.Build.0 = Release|x64
 		{FA6BC769-575C-42A2-AB71-863BD643B01A}.Release|x86.ActiveCfg = Release|Win32
 		{FA6BC769-575C-42A2-AB71-863BD643B01A}.Release|x86.Build.0 = Release|Win32
+		{62D294A2-3C97-4EFD-AA68-A81F336704AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62D294A2-3C97-4EFD-AA68-A81F336704AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62D294A2-3C97-4EFD-AA68-A81F336704AB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{62D294A2-3C97-4EFD-AA68-A81F336704AB}.Debug|x64.Build.0 = Debug|Any CPU
+		{62D294A2-3C97-4EFD-AA68-A81F336704AB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{62D294A2-3C97-4EFD-AA68-A81F336704AB}.Debug|x86.Build.0 = Debug|Any CPU
+		{62D294A2-3C97-4EFD-AA68-A81F336704AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62D294A2-3C97-4EFD-AA68-A81F336704AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62D294A2-3C97-4EFD-AA68-A81F336704AB}.Release|x64.ActiveCfg = Release|Any CPU
+		{62D294A2-3C97-4EFD-AA68-A81F336704AB}.Release|x64.Build.0 = Release|Any CPU
+		{62D294A2-3C97-4EFD-AA68-A81F336704AB}.Release|x86.ActiveCfg = Release|Any CPU
+		{62D294A2-3C97-4EFD-AA68-A81F336704AB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
