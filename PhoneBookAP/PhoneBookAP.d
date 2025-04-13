@@ -40,7 +40,14 @@ int main()
 		{
 			writeln("To delete a user, you must enter the user name.");
 			string inputUserDelete = readln();
-			manager.DeleteData(inputUserDelete);
+			if(!inputUserDelete.empty)
+			{
+				manager.DeleteData(inputUserDelete);
+			}else
+			{
+				writeln("Error , input must not be empty.");
+			}
+			
 		}else if(inputUser == "exit")
 		{
 			break;
